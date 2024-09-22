@@ -2,25 +2,25 @@
 
 máquina utilizada: Ubuntu 24.04.1 LTS x86_64 
 
-sudo apt install python3
-sudo apt install python3.12-venv
+    sudo apt install python3
+    sudo apt install python3.12-venv
+    
+    python3 -m venv venv
+    source venv/bin/activate
 
-python3 -m venv venv
-source venv/bin/activate
+    pip3 install django
+    pip3 install djangorestframework
+    pip3 install django-cors-headers
+    pip3 install django-cors
+    pip3 install drf-yasg # hi swagger
 
-pip3 install django
-pip3 install djangorestframework
-pip3 install django-cors-headers
-pip3 install django-cors
-pip3 install drf-yasg # hi swagger
-
-django-admin startproject ia2ecc
-cd ia2ecc
+    django-admin startproject ia2ecc
+    cd ia2ecc
 
 # executar a main
-python3 manage.py runserver
+    python3 manage.py runserver
 
-python3 manage.py startapp ia2eccApp
+    python3 manage.py startapp ia2eccApp
 
 # configurar o settings.py adicionando as seguintes configurações:
 
@@ -39,10 +39,10 @@ python3 manage.py startapp ia2eccApp
 # configurar as models.py (classes) no app
 
 # fazendo as migrações (database) - caso feita alguma alteração em models, basta rodar isso de novo
-python3 manage.py makemigrations ia2eccApp
+    python3 manage.py makemigrations ia2eccApp
 
 # aplicando as migrações
-python3 manage.py migrate ia2eccApp
+    python3 manage.py migrate ia2eccApp
 
 # configurar as urls.py do app primeiro
 
